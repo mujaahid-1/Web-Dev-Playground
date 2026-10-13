@@ -1,6 +1,7 @@
 const celsiusEl = document.getElementById("celcius");
 const fahrenheitEl = document.getElementById("fahrenheit");
 const kelvinEl = document.getElementById("kelvin");
+const clearBtn = document.getElementById("clearInputs");
 
 const computeTemp = (e) => {
   let currentValue = +e.target.value;
@@ -26,3 +27,9 @@ const computeTemp = (e) => {
 celsiusEl.addEventListener("change", computeTemp);
 fahrenheitEl.addEventListener("change", computeTemp);
 kelvinEl.addEventListener("change", computeTemp);
+
+clearBtn.addEventListener('click', () => {
+  celsiusEl.value = "";
+  fahrenheitEl.value = "";
+  kelvinEl.value = "";
+})
